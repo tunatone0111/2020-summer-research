@@ -174,7 +174,7 @@ def make_predictions(opts, model, dataset):
         if len(out['image_examples']) < _NUM_IMAGE_EXAMPLES_TO_RECORD:
             out['image_examples'].extend(images)
 
-    return {k: np.stack(a) for k, a in six.iteritems(out)}
+    return {k: np.stack(a) for k, a in out.items()}
 
 # %%
 # data_lib = []
